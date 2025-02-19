@@ -416,16 +416,16 @@ namespace FS.NetDCU
          *** Function: int HandleError(int success, string errorfunction)  ***
          ***                                                               ***
          *** Parameters: success:       Return value of API function:      ***
-         ***                            0: Failure, !=0: Success           ***
+         ***                            0: Success, !=0: Failure           ***
          ***             errorfunction: Name of function that failed       ***
          ***                                                               ***
          *** Return:     0: Success                                        ***
-         ***             !=0: Error from Marshal.GetLastPInvokeError()     ***
+         ***             !=0: Error from GetLastWin32Error()               ***
          ***                                                               ***
          *** Description:                                                  ***
          *** ------------                                                  ***
          *** Depending on the error reporting method,  return the error of ***
-         *** Marshal.GetLastPInvokeError() directly or throw an exception. ***
+         *** GetLastWin32Error() directly or throw an exception.           ***
          *** This function is meant to be called directly with the result  ***
          *** of the API function. Example:                                 ***
          ***                                                               ***
