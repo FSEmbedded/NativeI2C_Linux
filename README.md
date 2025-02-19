@@ -14,6 +14,8 @@ You can also build it yourself:
 csc.exe /target:library /out:NativeI2C.dll /reference:System.dll .\NI2CFile.cs
 ```
 
+In your application code, you need to change the device address, for example ***I2C2:*** could be called with ***/dev/i2c-2*** in Linux, depending on your hardware and pin connections.
+
 When using Mono, you also need need a [special library](https://github.com/FSEmbedded/dotnet_linux_IO_API) provided by F&S.
 Also have a look at [NativeSPI-V1 for Linux](https://github.com/FSEmbedded/NativeSPI-V1_Linux) and this [demo application](https://github.com/FSEmbedded/WinForms_On_Linux_InterfaceDemo).
 
